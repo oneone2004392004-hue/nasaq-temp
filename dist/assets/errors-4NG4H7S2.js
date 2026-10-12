@@ -1,0 +1,1 @@
+function n(e,s){if(e instanceof Error)return e.message||s;if(typeof e=="string")return e||s;if(typeof e=="object"&&e!==null&&"message"in e){const t=e.message;if(typeof t=="string")return t||s}return s}export{n as e};

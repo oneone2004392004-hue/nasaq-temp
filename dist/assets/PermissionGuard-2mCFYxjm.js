@@ -1,0 +1,1 @@
+import{u as a,j as s}from"./index-DTwrYXZa.js";const u=({permission:r,fallback:n=null,children:t})=>{const{hasPermission:e}=a();return e(r)?s.jsx(s.Fragment,{children:t}):s.jsx(s.Fragment,{children:n})};export{u as C};
