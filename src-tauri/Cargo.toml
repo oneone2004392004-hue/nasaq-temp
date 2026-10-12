@@ -1,0 +1,30 @@
+[package]
+name = "nasaq-pos"
+version = "1.0.2"
+description = "NASAQ POS — Restaurant Point of Sale & Management System"
+authors = ["NASAQ Team"]
+edition = "2021"
+default-run = "nasaq-pos"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[build-dependencies]
+tauri-build = { version = "2.7.0", features = [] }
+
+[dependencies]
+tauri = { version = "2.12.0", features = ["tray-icon"] }
+tauri-plugin-fs = "2.6.0"
+tauri-plugin-dialog = "2.8.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+rusqlite = { version = "0.32", features = ["bundled"] }
+tauri-plugin-log = "2.7.0"
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.52", features = [
+    "Win32_Graphics_Printing",
+    "Win32_Graphics_Gdi",
+    "Win32_Foundation",
+    "Win32_Security"
+] }
